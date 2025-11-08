@@ -32,7 +32,7 @@ export const Hero = () => {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
           Build faster with
-          <span className="block gradient-accent bg-clip-text text-transparent mt-2 drop-shadow-[0_0_30px_rgba(14,165,233,0.5)]">
+          <span className="block text-foreground mt-2 drop-shadow-[0_0_30px_rgba(14,165,233,0.5)]">
             DotRep
           </span>
         </motion.h1>
