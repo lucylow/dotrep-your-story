@@ -1,35 +1,35 @@
-import { Database, Zap, Shield, Code2, Workflow, Cloud } from "lucide-react";
+import { Database, Shield, Code2, Workflow, Cloud, Award } from "lucide-react";
 
 const features = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Built on Vite and optimized for development speed. Hot module replacement keeps you in the flow.",
+    icon: Award,
+    title: "Cryptographic Proofs",
+    description: "Every contribution is cryptographically signed and anchored to Polkadot Cloud for immutable verification.",
   },
   {
     icon: Database,
-    title: "Powerful ORM",
-    description: "Drizzle ORM provides type-safe database queries with zero overhead and incredible DX.",
-  },
-  {
-    icon: Code2,
-    title: "End-to-End TypeScript",
-    description: "Full type safety from your database to your frontend. Catch errors before they reach production.",
+    title: "XCM Integration",
+    description: "Query reputation across parachains using Cross-Consensus Message (XCM) format for seamless interoperability.",
   },
   {
     icon: Shield,
-    title: "Secure by Default",
-    description: "Built-in security best practices, input validation, and protection against common vulnerabilities.",
+    title: "Soulbound Tokens",
+    description: "Non-transferable SBTs represent your portable reputation that follows you across the Polkadot ecosystem.",
+  },
+  {
+    icon: Code2,
+    title: "Developer Identity",
+    description: "Link GitHub contributions to your on-chain identity with verifiable credentials and attestations.",
   },
   {
     icon: Workflow,
-    title: "tRPC Integration",
-    description: "Move fast with auto-generated API clients. No code generation, just pure TypeScript magic.",
+    title: "Trust Primitives",
+    description: "Built-in reputation primitives for commits, reviews, issues, and cross-project collaboration.",
   },
   {
     icon: Cloud,
-    title: "Deploy Anywhere",
-    description: "Deploy to your favorite platform with zero configuration. Vercel, Railway, or self-hosted.",
+    title: "Polkadot Cloud DA",
+    description: "Contribution manifests anchored to Polkadot Cloud Data Availability for censorship-resistant storage.",
   },
 ];
 
@@ -39,10 +39,10 @@ export const Features = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Everything you need to build modern apps
+            Reputation that travels with you
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            DotRep combines the best tools in the TypeScript ecosystem into one cohesive framework
+            DotRep creates portable, verifiable developer reputation anchored on Polkadot
           </p>
         </div>
 

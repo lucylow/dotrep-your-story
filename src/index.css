@@ -8,41 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 10%;
+    --background: 217 19% 16%;
     --foreground: 210 40% 98%;
 
-    --card: 220 23% 12%;
+    --card: 217 19% 18%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 23% 12%;
+    --popover: 217 19% 18%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 220 25% 10%;
+    /* DotRep pink - Polkadot brand color */
+    --primary: 328 100% 45%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 20% 16%;
+    --secondary: 217 19% 20%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 20% 16%;
+    --muted: 217 19% 20%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 175 70% 41%;
+    /* Polkadot secondary cyan/teal */
+    --accent: 182 100% 45%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 18% 20%;
-    --input: 220 18% 20%;
-    --ring: 199 89% 48%;
+    --border: 217 15% 24%;
+    --input: 217 15% 24%;
+    --ring: 328 100% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 10%) 0%, hsl(220 30% 14%) 50%, hsl(199 40% 18%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(175 70% 41%) 100%);
-    --glow-primary: 0 0 40px hsl(199 89% 48% / 0.3);
-    --glow-accent: 0 0 30px hsl(175 70% 41% / 0.2);
+    /* Custom DotRep tokens */
+    --dot-charcoal: 217 19% 16%;
+    --dot-silver: 210 40% 98%;
+    --dot-pink: 328 100% 45%;
+    --gradient-hero: linear-gradient(135deg, hsl(217 19% 16%) 0%, hsl(217 25% 20%) 50%, hsl(328 40% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(328 100% 45%) 0%, hsl(182 100% 45%) 100%);
+    --glow-primary: 0 0 40px hsl(328 100% 45% / 0.4);
+    --glow-accent: 0 0 30px hsl(182 100% 45% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 

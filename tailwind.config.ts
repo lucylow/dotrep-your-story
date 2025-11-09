@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "dot-charcoal": "hsl(var(--dot-charcoal))",
+        "dot-silver": "hsl(var(--dot-silver))",
+        "dot-pink": "hsl(var(--dot-pink))",
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        mono: ["Fira Code", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

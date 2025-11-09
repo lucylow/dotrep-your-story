@@ -1,25 +1,27 @@
 export const CodeExample = () => {
-  const codeSnippet = `// Define your schema with Drizzle ORM
-import { pgTable, serial, text } from 'drizzle-orm/pg-core';
+  const codeSnippet = `// Sign a contribution proof with Polkadot wallet
+import { web3FromSource } from '@polkadot/extension-dapp';
+import { u8aToHex, stringToU8a } from '@polkadot/util';
 
-export const users = pgTable('users', {
-  id: serial('id').primaryKey(),
-  name: text('name').notNull(),
-  email: text('email').notNull().unique(),
+const contribution = {
+  repo: "polkadot-js/api",
+  commit: "abc123",
+  timestamp: Date.now(),
+  developer: account.address
+};
+
+// Get injector and sign the proof
+const injector = await web3FromSource(account.meta.source);
+const signRaw = injector.signer.signRaw;
+
+const { signature } = await signRaw({
+  address: account.address,
+  data: u8aToHex(stringToU8a(JSON.stringify(contribution))),
+  type: 'bytes'
 });
 
-// Create type-safe tRPC procedures
-export const userRouter = t.router({
-  create: t.procedure
-    .input(z.object({ name: z.string(), email: z.string() }))
-    .mutation(async ({ input }) => {
-      return await db.insert(users).values(input);
-    }),
-});
-
-// Use it in your frontend with full type safety
-const { mutate } = trpc.user.create.useMutation();
-mutate({ name: 'John', email: 'john@example.com' });`;
+// Anchor to Polkadot Cloud DA
+await anchorToPolkadotCloud(contribution, signature);`;
 
   return (
     <section className="py-24 px-6">
@@ -27,18 +29,17 @@ mutate({ name: 'John', email: 'john@example.com' });`;
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Write once,{" "}
-              <span className="gradient-accent bg-clip-text text-transparent">type everywhere</span>
+              Sign once,{" "}
+              <span className="gradient-accent bg-clip-text text-transparent">verify everywhere</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Define your database schema once and get instant type safety across your entire stack.
-              No code generation needed.
+              Cryptographically sign your contributions with your Polkadot wallet and create immutable proofs anchored on-chain.
             </p>
             <ul className="space-y-4">
               {[
-                "Automatic type inference from database to frontend",
-                "Zero runtime overhead with compile-time checks",
-                "Refactor with confidence using TypeScript",
+                "Wallet-signed contribution proofs using Polkadot.js",
+                "Anchored to Polkadot Cloud DA for censorship resistance",
+                "Query reputation across parachains via XCM",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="mt-1 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
