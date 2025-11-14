@@ -1,44 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Wallet } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { CopyCLI } from "./CopyCLI";
 import { AnimatedCounter } from "./AnimatedCounter";
 import { LiveSandbox } from "./LiveSandbox";
-import { useState } from "react";
-import { web3Enable, web3Accounts } from "@polkadot/extension-dapp";
-import { toast } from "@/hooks/use-toast";
+import { WalletConnect } from "./WalletConnect";
 
 export const Hero = () => {
-  const [connecting, setConnecting] = useState(false);
-
-  const handleWalletConnect = async () => {
-    setConnecting(true);
-    try {
-      const extensions = await web3Enable("DotRep");
-      if (extensions.length === 0) {
-        toast({
-          title: "Polkadot Wallet Not Found",
-          description: "Please install Polkadot.js extension to connect your wallet.",
-          variant: "destructive",
-        });
-        return;
-      }
-      const accounts = await web3Accounts();
-      if (accounts.length > 0) {
-        toast({
-          title: "Wallet Connected!",
-          description: `Connected to ${accounts[0].address.slice(0, 8)}...`,
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "Connection Failed",
-        description: "Failed to connect wallet. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setConnecting(false);
-    }
+  const handleWalletConnected = (address: string, source: string) => {
+    console.log("Wallet connected:", address, source);
+    // TODO: Store wallet info, link to GitHub, etc.
   };
 
   return (
@@ -96,16 +67,7 @@ export const Hero = () => {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <Button 
-            size="lg" 
-            onClick={handleWalletConnect}
-            disabled={connecting}
-            className="group bg-primary hover:bg-primary/90 text-primary-foreground glow-primary transition-smooth text-lg px-8 py-6"
-          >
-            <Wallet className="mr-2 h-5 w-5" />
-            {connecting ? "Connecting..." : "Connect Polkadot Wallet"}
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <WalletConnect onConnected={handleWalletConnected} showDisconnect={true} />
           <Button size="lg" variant="outline" className="border-border hover:bg-secondary text-foreground text-lg px-8 py-6" asChild>
             <a href="https://github.com/lucylow/dotrep-your-story" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
