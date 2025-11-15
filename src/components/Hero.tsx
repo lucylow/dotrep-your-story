@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github, Award } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { CopyCLI } from "./CopyCLI";
 import { AnimatedCounter } from "./AnimatedCounter";
 import { LiveSandbox } from "./LiveSandbox";
@@ -68,6 +69,13 @@ export const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <WalletConnect onConnected={handleWalletConnected} showDisconnect={true} />
+          <Link to="/reputation">
+            <Button size="lg" className="text-lg px-8 py-6 gap-2 group">
+              <Award className="h-5 w-5" />
+              View Dashboard
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
           <Button size="lg" variant="outline" className="border-border hover:bg-secondary text-foreground text-lg px-8 py-6" asChild>
             <a href="https://github.com/lucylow/dotrep-your-story" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
