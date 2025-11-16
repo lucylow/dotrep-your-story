@@ -50,7 +50,7 @@ export const Hero = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed"
         >
-          Portable, cryptographically verifiable reputation for developers — anchored on Polkadot Cloud, queryable across parachains via XCM.
+          Batch proofs • Pin to Polkadot Cloud • Anchor on chain • Issue reputation tokens
         </motion.p>
 
         <motion.div

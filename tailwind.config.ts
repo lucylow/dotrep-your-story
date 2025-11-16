@@ -63,7 +63,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
-        mono: ["Fira Code", "ui-monospace", "monospace"],
+        mono: ["Fira Code", "JetBrains Mono", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
