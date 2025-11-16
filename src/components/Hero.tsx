@@ -29,18 +29,21 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full backdrop-blur-sm"
         >
-          <span className="text-primary text-sm font-medium">The Trust Layer for Open Source</span>
+          <span className="text-primary text-sm font-mono">Decentralized Reputation Protocol</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
         >
-          Build reputation with
-          <span className="block text-foreground mt-2 drop-shadow-[0_0_30px_rgba(230,0,122,0.6)]">
-            DotRep
+          Decentralized Reputation.
+          <span className="block text-primary mt-2 drop-shadow-[0_0_30px_rgba(230,0,122,0.6)]">
+            Verifiable Proofs.
+          </span>
+          <span className="block text-secondary mt-2 drop-shadow-[0_0_30px_rgba(214,69,255,0.6)]">
+            Cross-Chain Ready.
           </span>
         </motion.h1>
 
@@ -48,9 +51,9 @@ export const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-mono"
         >
-          Batch proofs • Pin to Polkadot Cloud • Anchor on chain • Issue reputation tokens
+          DotRep anchors developer contributions into Polkadot Cloud DA, verifies them off-chain, and finalizes trust on-chain through a custom Substrate pallet.
         </motion.p>
 
         <motion.div

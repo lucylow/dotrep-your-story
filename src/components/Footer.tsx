@@ -50,7 +50,9 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-muted-foreground space-y-2">
-          <p>© {new Date().getFullYear()} DotRep • Built on Polkadot Cloud</p>
+          <p className="font-mono">DotRep — Decentralized Reputation on Polkadot Cloud</p>
+          <p className="text-xs font-mono">Pallet • Off-chain Worker • Merkle Batch • DA Storage • SBT</p>
+          <p className="text-xs">© {new Date().getFullYear()} DotRep — All Rights Reserved</p>
           <p className="text-xs">Version v20251116-3</p>
         </div>
       </div>
