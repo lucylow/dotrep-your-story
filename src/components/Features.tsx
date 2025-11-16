@@ -1,20 +1,25 @@
-import { Database, Shield, Code2, Workflow, Cloud, Award } from "lucide-react";
+import { Database, Shield, Code2, Award } from "lucide-react";
 
 const features = [
   {
     icon: Shield,
-    title: "Verifiable",
-    description: "All contributions are reduced to deterministic proof objects and hashed into Merkle trees.",
-  },
-  {
-    icon: Database,
-    title: "Portable",
-    description: "Your reputation follows you across parachains, DAOs, and EVM chains via XCM-compatible APIs.",
+    title: "Proof Anchoring",
+    description: "Pin batches to Polkadot Cloud Data Availability and anchor merkle roots on-chain for cryptographic verification.",
   },
   {
     icon: Award,
-    title: "Tamper-Resistant",
-    description: "Anchored to Polkadot and secured by SBT issuance through a custom Substrate pallet.",
+    title: "Reputation SBTs",
+    description: "Issue soulbound tokens to trusted contributors. Your reputation follows you across parachains via XCM.",
+  },
+  {
+    icon: Database,
+    title: "Polkadot Cloud",
+    description: "Built on Polkadot Cloud data availability and execution pods for scalable, decentralized reputation.",
+  },
+  {
+    icon: Code2,
+    title: "Analytics Dashboard",
+    description: "Real-time metrics: anchors/hr, latency, SBTs minted. Track your reputation growth across the ecosystem.",
   },
 ];
 
